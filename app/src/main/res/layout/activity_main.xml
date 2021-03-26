@@ -4,25 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/send_to" />
+
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:hint="@string/hint"
-        android:ems="10" />
+        android:layout_weight="2"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/hint" />
+    <!--This view is the only one with any weight.It will expand to fill the space that’s not needed by any of the other views.-->
+    <!--The height of the view will be determined by the linear layout based on the layout_weight. Setting the layout_height to “0dp”
+     is more efficient than setting it to “wrap_content”, as this way Android doesn’t have to work out the value of “wrap_content”.-->
+
     <Button
         android:id="@+id/sendBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:layout_marginTop="20dp"
         android:onClick="onSendMessage"
-        android:text="@string/send_button"/>
-
+        android:text="@string/send_button" />
 
 
 </LinearLayout>

@@ -3,4 +3,5 @@
     <string name="hint">Enter a message</string>
     <string name="send_button">Send Message</string>
     <string name="chooser">Send Message via....</string>
+    <string name="send_to">To</string>
 </resources>
